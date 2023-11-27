@@ -1,0 +1,22 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+.acciones{
+    margin-top: 5rem;
+
+    @include m.tablet{
+        display: flex;
+        justify-content: space-between;//esto es para que este uno de un lado y el otro del otro
+    }
+
+    a{
+        display: block;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: v.$negro;
+        &:last-of-type{//esto se utiliza para que el ultimo iten no tenga margen
+            margin-bottom: 0;
+        }
+    }
+}
